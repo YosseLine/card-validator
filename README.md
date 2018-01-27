@@ -91,18 +91,26 @@ en caso de que sí pase.
 
 ### Día 1:
 
-- Se formó el equipo:
-
- Las integrantes fueron elegidas por el jedi master.
+- El equipo está conformado por:
+  Yosseline Apcho Huaman
+  Tahirih Jaliri Pancca
 
 - Seleccionar el reto:
-
-Por unanimidad, el reto seleccionado fue: 'Validación de tarjetas de crédito'.
+  Por unanimidad, el reto seleccionado es: 'Validación de tarjetas de crédito'.
 
 ***
 
+## Algoritmo de Luhn:
+
+La construcción de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
+El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada multiplicando dígitos adyacentes por constantes distintas (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
+  1. Se multiplican los dígitos impares por 2.
+  2. Si del producto resultan dos dígitos, sus cifras se suman para obtener un único término.
+  3. Se suman todos los términos pares e impares.
+  La secuencia será correcta si la suma es un múltiplo de 10, es decir, su resto es cero. 
+
 ## Snippets:
-//Este es un ejemplo de snippet, qe va a ser modificado para mejorar la librería.
+//Este es un ejemplo de snippet, que será modificado para mejorar la librería.
 
 ```
 validateCardNumber('id input tarjeta') // 25467589647
