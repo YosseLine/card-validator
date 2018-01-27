@@ -1,0 +1,5 @@
+#SCSS caché
+.sass-cache/
+
+#Dependency directories
+node_modules/

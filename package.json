@@ -1,0 +1,19 @@
+{
+  "name": "card-validator",
+  "version": "1.0.0",
+  "description": "\"Validador de tarjetas de crédito\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YosseLine/card-validator.git"
+  },
+  "author": "Yosseline Apcho, Tahirih Jaliri.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YosseLine/card-validator/issues"
+  },
+  "homepage": "https://github.com/YosseLine/card-validator#readme"
+}
