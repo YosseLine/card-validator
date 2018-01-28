@@ -29,7 +29,7 @@
 
 * .gitignore para ignorar node_modules u otras carpetas que no deban incluirse en control de versiones (git).
 
-- Hacker edition (opcional):
+1.1 Hacker edition (opcional):
 
 * Si la librería está dirigida al navegador, debe adherirse al patrón UMD para poder ser usado con AMD, CommonJS y como variable global del navegador.
 
@@ -107,7 +107,7 @@ El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para da
   1. Se multiplican los dígitos impares por 2.
   2. Si del producto resultan dos dígitos, sus cifras se suman para obtener un único término.
   3. Se suman todos los términos pares e impares.
-  La secuencia será correcta si la suma es un múltiplo de 10, es decir, su resto es cero. 
+  La secuencia será correcta si la suma es un múltiplo de 10, es decir, su resto es cero.
 
 ## Snippets:
 //Este es un ejemplo de snippet, que será modificado para mejorar la librería.
