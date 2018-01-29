@@ -108,11 +108,9 @@ en caso de que sí pase.
 
 - Se realizó una 'lluvia de ideas' para el proyecto.
 
-### Día 4:
-
 - Se procedió a iniciar el proyecto, creando una estructura básica de carpetas, junto con la primera versión de README.
 
-### Día 5:
+### Día 4:
 
 - Se continuaron con als mejoras del README, se crearon y/o modificaron nuevos archivos necesarios.
 
