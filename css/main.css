@@ -1,5 +1,56 @@
+/*RESETEANDO*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+/*CLASES REUTILIZABLES*/
+.margin-btm-0{
+  margin-bottom: 0;
+}
+.margin-top-0{
+  margin-top: 0;
+}
+.container-flex-column{
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.vh100 {
+height: 100vh;
+}
+/*ESTILOS PARA BODY*/
+body{
+  background-image: url('https://img00.deviantart.net/a4b1/i/2008/211/8/f/sunset_twilight_clouds_sky_10_by_fantasystock.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*ESTILOS PARA EL FORM*/
+form.col.s12{
+  background-color: rgba(255,255,255,0.3);
+  border: 3px solid #FFF;
+  border-radius: 50PX;
+  padding: 30px;
+}
+label{
+  color: #000;
+}
+input[type=number]:not(.browser-default), input[type=text]:not(.browser-default){
+  border-bottom: 1px solid #000;
+}
+
+@media (min-width: 1200px) {
+  section div.container{
+    width: : 90% !important;
+  }
+  div.row.margin-desktop-0{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
