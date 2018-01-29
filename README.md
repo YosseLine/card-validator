@@ -91,12 +91,30 @@ en caso de que sí pase.
 
 ### Día 1:
 
-- El equipo está conformado por:
+- Se formó el equipo, conformado por:
   Yosseline Apcho Huaman
   Tahirih Jaliri Pancca
 
-- Seleccionar el reto:
-  Por unanimidad, el reto seleccionado es: 'Validación de tarjetas de crédito'.
+- Se seleccionó el reto:
+  Por unanimidad, el reto seleccionado fue: 'Validación de tarjetas de crédito'.
+
+### Día 2:
+
+- Se realizó la repartición equitativa del proyecto. Acordando que ambas integrantes indagarián más sobre las herramientas nuevas que iban a usar.
+
+### Día 3:
+
+- Se realizó el fork del repositorio modelo.
+
+- Se realizó una 'lluvia de ideas' para el proyecto.
+
+### Día 4:
+
+- Se procedió a iniciar el proyecto, creando una estructura básica de carpetas, junto con la primera versión de README.
+
+### Día 5:
+
+- Se continuaron con als mejoras del README, se crearon y/o modificaron nuevos archivos necesarios.
 
 ***
 
@@ -104,12 +122,16 @@ en caso de que sí pase.
 
 La construcción de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
 El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada multiplicando dígitos adyacentes por constantes distintas (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
+
   1. Se multiplican los dígitos impares por 2.
   2. Si del producto resultan dos dígitos, sus cifras se suman para obtener un único término.
   3. Se suman todos los términos pares e impares.
   La secuencia será correcta si la suma es un múltiplo de 10, es decir, su resto es cero.
 
+***
+
 ## Snippets:
+
 //Este es un ejemplo de snippet, que será modificado para mejorar la librería.
 
 ```
@@ -118,3 +140,17 @@ expiryDate(id input fecha expiración) //  20-14-18
 cardVerificationValue(id input número verificación tarjeta) // 456
 nameUser(id input nombre usuario) // Tatiana Rojas
 ```
+
+***
+
+## Herramientas utilizadas:
+
+- EC6.
+
+- HTML5.
+
+- CSS3.
+
+- Materialize.
+
+- jQuery.
