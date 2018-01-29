@@ -87,22 +87,32 @@ en caso de que sí pase.
 
 ***
 
-## Progreso:
+## Proceso (PLANIFICACIÓN):
 
 ### Día 1:
+
+**MIÉRCOLES: 24/01/2017**
 
 - Se formó el equipo, conformado por:
   Yosseline Apcho Huaman
   Tahirih Jaliri Pancca
 
+### Día 2:
+
+**JUEVES: 25/01/2017**
+
 - Se seleccionó el reto:
   Por unanimidad, el reto seleccionado fue: 'Validación de tarjetas de crédito'.
 
-### Día 2:
+### Día 3:
+
+**VIERNES: 26/01/2017**
 
 - Se realizó la repartición equitativa del proyecto. Acordando que ambas integrantes indagarián más sobre las herramientas nuevas que iban a usar.
 
-### Día 3:
+### Día 4:
+
+**SÁBADO: 27/01/2017**
 
 - Se realizó el fork del repositorio modelo.
 
@@ -110,11 +120,17 @@ en caso de que sí pase.
 
 - Se procedió a iniciar el proyecto, creando una estructura básica de carpetas, junto con la primera versión de README.
 
-### Día 4:
+### Día 5:
 
-- Se continuaron con als mejoras del README, se crearon y/o modificaron nuevos archivos necesarios.
+**DOMINGO: 28/01/2017**
+
+- Se continuaron con las mejoras del README, se crearon y/o modificaron nuevos archivos necesarios.
 
 ***
+
+## Milestone:
+
+![Milestone](assets/docs/milestone.png)
 
 ## Algoritmo de Luhn:
 
