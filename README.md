@@ -130,7 +130,7 @@ en caso de que sí pase.
 
 ## Milestone:
 
-![Milestone](assets/docs/milestone.png)
+![Milestone](public/assets/docs/milestone.png)
 
 ## Algoritmo de Luhn:
 
