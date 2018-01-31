@@ -1,28 +1,26 @@
-let data = {
-  "user": [
-    {
-      "nombre":  "Juan Sanchez Rodiguez Trigoso",
-      "num_tarjeta": "134567895675",
-      "fecha_expir": "23/05/18",
-      "codigo_valid": "345"
-    },
-    {
-        "nombre":  "Selena Lopez Cespedes Rojas",
-        "num_tarjeta": "345627849467",
-        "fecha_expir": "03/12/19",
-        "codigo_valid": "005"
-    },
-    {
-      "nombre":  "Yuriko Ramos Velazques Prado",
-      "num_tarjeta": "236459873578",
-      "fecha_expir": "12/03/18",
-      "codigo_valid": "005"
-    },
-    {
-      "nombre":  "Yelina Lauren Caceres Peralta",
-      "num_tarjeta": "124638742837",
-      "fecha_expir": "05/105/19",
-      "codigo_valid": "679"
-    }
-   ]
+const json = [
+  {
+    "name":  "Juan Sanchez Rodriguez Trigoso",
+    "num_card": "134567895675",
+    "expir_date": "23 Mayo, 2018",
+    "valid_code": "345"
   },
+  {
+    "name":  "Selena Lopez Cespedes Rojas",
+    "num_card": "345627849467",
+    "expir_date": "03 Diciembre, 2019",
+    "valid_code": "555"
+  },
+  {
+    "name":  "Yuriko Ramos Velazques Prado",
+    "num_card": "236459873578",
+    "expir_date": "12 Marzo, 2018",
+    "valid_code": "005"
+  },
+  {
+    "name":  "Yelina Lauren Caceres Peralta",
+    "num_card": "124638742837",
+    "expir_date": "05 Mayo, 2019",
+    "valid_code": "679"
+  }
+];

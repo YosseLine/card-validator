@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Validador de tarjetas de crédito</title>
     <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
-    <meta name="theme-color" content="#3eb060"/>
-    <link rel="icon" type="image/png" href="../assets/images/infinity.png">
+    <meta name="theme-color" content="#26a69a"/>
+    <link rel="icon" type="image/png" href="../assets/images/target.png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -29,16 +29,16 @@
           </div>
           <div class="row">
             <div class="input-field col s3 margin-top-0">
-              <input id="number-card" type="number" class="validate">
+              <input id="cn" type="number" class="validate" name="cn">
             </div>
             <div class="input-field col s3 margin-top-0">
-              <input id="number-card" type="number" class="validate">
+              <input id="cn" type="number" class="validate" name="cn">
             </div>
             <div class="input-field col s3 margin-top-0">
-              <input id="number-card" type="number" class="validate">
+              <input id="cn" type="number" class="validate" name="cn">
             </div>
             <div class="input-field col s3 margin-top-0">
-              <input id="number-card" type="number" class="validate">
+              <input id="cn" type="number" class="validate" name="cn">
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -48,7 +48,7 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-                <input type="text" class="datepicker">
+                <input id="exp" type="text" class="datepicker" name="exp">
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -58,7 +58,7 @@
           </div>
           <div class="row">
             <div class="input-field col s12 margin-top-0">
-              <input id="code-verify" type="number" class="validate">
+              <input id="cv" type="number" class="validate" name="cv">
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -68,12 +68,12 @@
           </div>
           <div class="row">
             <div class="input-field col s12 margin-top-0">
-              <input id="code-verify" type="text" class="validate">
+              <input id="name" type="text" class="validate" name="name">
             </div>
           </div>
           <div class="row">
             <div class="col s6 offset-s3">
-              <a class="waves-effect waves-light btn-large pulse col s12">Validar</a>
+              <a id="btn-validate" class="waves-effect waves-light btn-large col s12">Validar</a>
             </div>
           </div>
         </form>
@@ -84,6 +84,7 @@
   <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/index.js"></script>
+  <script type="text/javascript" src="../data.json"></script>
   <script type="text/javascript" src="../vendors/materialize//materialize.js"></script>
 </body>
 </html>
