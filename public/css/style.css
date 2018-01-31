@@ -15,7 +15,11 @@ img.example{
 }
 nav ul a,
 nav .brand-logo {
+<<<<<<< HEAD
   color: #;
+=======
+  color: #FFF;
+>>>>>>> 8310c272a318cb696f3508d32e0aa74195ae820d
 }
 
 p {

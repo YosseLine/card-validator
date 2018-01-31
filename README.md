@@ -64,7 +64,7 @@
     <label for="name">Nombre completo</label>
     <input id="name" name="name" />
   </div>
-  <input type="submit" value="Pagar" />
+  <button type="button" name="button">Validar</button>
 </form>
 ```
 
@@ -146,13 +146,8 @@ El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para da
 
 ## Snippets:
 
-//Este es un ejemplo de snippet, que será modificado para mejorar la librería.
-
 ```
-validateCardNumber('id input tarjeta') // 25467589647
-expiryDate(id input fecha expiración) //  20-14-18
-cardVerificationValue(id input número verificación tarjeta) // 456
-nameUser(id input nombre usuario) // Tatiana Rojas
+validate(form) // Validará los datos y arrojará el resultado mediante un alert.
 ```
 
 ***
@@ -168,3 +163,7 @@ nameUser(id input nombre usuario) // Tatiana Rojas
 - Materialize.
 
 - jQuery.
+
+- Babel.
+
+- Node.js
