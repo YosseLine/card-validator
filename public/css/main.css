@@ -44,6 +44,9 @@ input[type=number]:not(.browser-default), input[type=text]:not(.browser-default)
 }
 
 @media (min-width: 1200px) {
+  body.container-flex-column{
+    height: 100vh;
+  }
   section div.container{
     width: : 90% !important;
   }

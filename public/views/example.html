@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Validador de tarjetas de crédito</title>
+    <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
+    <meta name="theme-color" content="#26a69a"/>
+    <link rel="icon" type="image/png" href="../assets/images/target.png">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="container-flex-column">
+  <section class="">
+    <div class="container">
+      <div class="row margin-desktop-0">
+        <div class="col s12 xl4">
+          <h1 class="center-align">Validador de tarjetas de crédito</h1>
+        </div>
+        <form class="col s12  m10 l12 xl8 offset-m1">
+          <div class="row margin-btm-0">
+            <div class="col s12">
+              <label for="number-card">Ingrese número de tarjeta</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s3 margin-top-0">
+              <input id="cn" type="number" class="validate" name="cn">
+            </div>
+            <div class="input-field col s3 margin-top-0">
+              <input id="cn" type="number" class="validate" name="cn">
+            </div>
+            <div class="input-field col s3 margin-top-0">
+              <input id="cn" type="number" class="validate" name="cn">
+            </div>
+            <div class="input-field col s3 margin-top-0">
+              <input id="cn" type="number" class="validate" name="cn">
+            </div>
+          </div>
+          <div class="row margin-btm-0">
+            <div class="col s12">
+              <label for="number-card">Ingrese fecha de expiración</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="exp" type="text" class="datepicker" name="exp">
+            </div>
+          </div>
+          <div class="row margin-btm-0">
+            <div class="col s12">
+              <label for="number-card">Ingrese código de validación</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 margin-top-0">
+              <input id="cv" type="number" class="validate" name="cv">
+            </div>
+          </div>
+          <div class="row margin-btm-0">
+            <div class="col s12">
+              <label for="number-card">Ingrese su nombre completo</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 margin-top-0">
+              <input id="name" type="text" class="validate" name="name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6 offset-s3">
+              <a id="btn-validate" class="waves-effect waves-light btn-large col s12">Validar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Vínculo de archivos js-->
+  <script type="text/javascript" src="../vendors/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+  <script type="text/javascript" src="../data.json"></script>
+  <script type="text/javascript" src="../vendors/materialize//materialize.js"></script>
+</body>
+</html>
