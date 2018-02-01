@@ -9,40 +9,36 @@
 
 ## Objetivo:
 
-- Construir una librería (library) que responda a los requisitos del reto.
+- Construir una librería (library) que facilite la validación de tarjetas de crédito.
 
 ***
 
-## Requisitos:
+## Archivos principales icluídos en el repositorio:
 
-1. El reto debe incluir los siguientes archivos:
+* README.md
 
-* README.md con descripción del módulo, instrucciones de instalación, uso y documentación del API.
+* index.js: Aquí se ubicará la funcionalidad de la librería.
 
-* index.js: Librería debe exportar una función u objeto al entorno global (window) y hacer uso de features de ES6 donde sea apropiado.
+* index.html: Archivo html que explica el uso de la librería.
 
-* index.html: Página web de la librería con ejemplo funcionando.
+* example.html: Página web demo.
 
-* package.json con nombre, versión, descripción, autores, licencia, dependencias, scripts (pretest, test, ...)
+* package.json.
 
-* .eslintrc con configuración para linter.
+* .eslintrc.
 
-* .gitignore para ignorar node_modules u otras carpetas que no deban incluirse en control de versiones (git).
-
-1.1 Hacker edition (opcional):
-
-* Si la librería está dirigida al navegador, debe adherirse al patrón UMD para poder ser usado con AMD, CommonJS y como variable global del navegador.
-
-* Integración continua con Travis o Circle CI.
+* .gitignore: para ignorar node_modules u otras carpetas que no deban incluirse en control de versiones (git).
 
 ***
 
-2. El plugin debe recibir una referencia a un elemento del DOM que contenga `<input>`s con los siguientes nombres (atributo `name`):
+## Sobre la librería:
 
-* `cn` (Card Number): El número de la tarjeta de crédito
-* `exp` (Expiry Date): Fecha de expiración
-* `cvv` (Card Verification Value): Código de validación de 3 dígitos
-* `name`: Nombre completo como aparece en la tarjeta
+- Deberá recibir referencias a un elemento del DOM que contenga `<input>`s con los siguientes nombres (atributo `name`):
+
+* `cn` (Card Number): El número de la tarjeta de crédito.
+* `cvv` (Card Verification Value): Código de validación de 3 dígitos.
+* `exp` (Expiry Date): Fecha de expiración.
+* `name`: Nombre completo como aparece en la tarjeta.
 
 ## Ejemplo
 
@@ -81,9 +77,15 @@ form.addEventListener('submit', (e) => {
 });
 ```
 
-3. A la hora de hacer las validaciones, la librería debería de añadir la clase
-`.error` a los `<input>`s que no pasen la validación, o la clase `.success`
-en caso de que sí pase.
+## Algoritmo de Luhn:
+
+La construcción de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
+El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada multiplicando dígitos adyacentes por constantes distintas (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
+
+  1. Se multiplican los dígitos impares por 2.
+  2. Si del producto resultan dos dígitos, sus cifras se suman para obtener un único término.
+  3. Se suman todos los términos pares e impares.
+  La secuencia será correcta si la suma es un múltiplo de 10, es decir, su resto es cero.
 
 ***
 
@@ -126,28 +128,40 @@ en caso de que sí pase.
 
 - Se continuaron con las mejoras del README, se crearon y/o modificaron nuevos archivos necesarios.
 
+### Día 6:
+
+**LUNES: 29/01/2017**
+
+- Se comenzó a dar funcionalidad a la librería.
+
+### Día 7:
+
+**MARTES: 30/01/2017**
+
+- Se continuó con la aplicación de la librería y el maquetado del archivo example.html
+
+### Día 8:
+
+**MIÉRCOLES: 31/01/2017**
+
+- Se dieron los últimos detalles al proyecto.
+
 ***
 
 ## Milestone:
 
 ![Milestone](public/assets/docs/milestone.png)
 
-## Algoritmo de Luhn:
-
-La construcción de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
-El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada multiplicando dígitos adyacentes por constantes distintas (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
-
-  1. Se multiplican los dígitos impares por 2.
-  2. Si del producto resultan dos dígitos, sus cifras se suman para obtener un único término.
-  3. Se suman todos los términos pares e impares.
-  La secuencia será correcta si la suma es un múltiplo de 10, es decir, su resto es cero.
-
 ***
 
 ## Snippets:
 
 ```
-validate(form) // Validará los datos y arrojará el resultado mediante un alert.
+libraryValidateCard.isValidCreditCard // (888888888888)
+libraryValidateCard.validateCodeVerification // (345)
+libraryValidateCard.validateName // ('Juan Sanchez Rodriguez Trigoso')
+libraryValidateCard.expireDate // ('03/18')
+
 ```
 
 ***

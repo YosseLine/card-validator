@@ -45,3 +45,4 @@ var libraryValidateCard = function (window, document) {
 libraryValidateCard.isValidCreditCard(5367865093344606); // tarjeta válida
 libraryValidateCard.isValidCreditCard(5367865093344636); // tarjeta no válida
 libraryValidateCard.isValidCreditCard('536786509334em06'); // tarjeta no válida que contiene letras
+

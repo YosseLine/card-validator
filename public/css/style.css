@@ -13,13 +13,13 @@
 img.example{
   width: 100%;
 }
+nav, footer.page-footer{
+  color: #000;
+  background: #FFF;
+}
 nav ul a,
 nav .brand-logo {
-<<<<<<< HEAD
-  color: #;
-=======
-  color: #FFF;
->>>>>>> 8310c272a318cb696f3508d32e0aa74195ae820d
+  color: #000;
 }
 
 p {
