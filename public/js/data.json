@@ -1,7 +1,7 @@
 const json = [
   {
     "name":  "Juan Sanchez Rodriguez Trigoso",
-    "num_card": "134567895675",
+    "num_card": "4686449600420675",
     "expir_date": "05/18",
     "valid_code": "345"
   },
@@ -13,7 +13,7 @@ const json = [
   },
   {
     "name":  "Yuriko Ramos Velazques Prado",
-    "num_card": "236459873578",
+    "num_card": "4701349114261170",
     "expir_date": "03/18",
     "valid_code": "005"
   },
