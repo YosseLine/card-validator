@@ -4,19 +4,24 @@ let libraryValidateCard = ((window, document) => {
       console.log('Boton que desactiva');
     },
     lenghtCard: (valInput) => {
-      if (valInput.length === 16) {
-        console.log('longitud: ' + valInput);
+      if (valInput.toString().length === 16) {
+        return true;
+      } else {
+        return false;
       }
     },
     onlyNumbers: (valInput) => {
       let onlyNum = /^[0-9]+$/;
       if (onlyNum.test(valInput)) {
-        return valInput;
+        return true;
+      } else {
+        return false;
       }
     },
     isValidCreditCard: (numberCard) => {
       let onlyNumbersCard = libraryValidateCard.onlyNumbers(libraryValidateCard.lenghtCard(numberCard));
-      if (onlyNumbersCard !== undefined) {
+     
+      if (libraryValidateCard.lenghtCard(numberCard) && libraryValidateCard.onlyNumbers(numberCard)) {
         let reverseNumberCard = numberCard.toString().split('');
         reverseNumberCard.reverse();
         let adder = 0; 
@@ -30,13 +35,14 @@ let libraryValidateCard = ((window, document) => {
           }
           adder += parseInt(reverseNumberCard[i]);
         }
-        return (adder % 10 === 0) ? (console.log('tarjeta valida')) : (alert('Número de tarjeta no válida'));
+        return (adder % 10 === 0) ? (console.log('tarjeta valida')) : (console.log('Número de tarjeta no válida'));
       } else {
-        libraryValidateCard.desactiveButton();
+        console.log('error de validacion de tarjeta');
       }
     }
   };
 })(window, document);
 
-console.log(libraryValidateCard.lenghtCard(5367865093344606));
-console.log(libraryValidateCard.isValidCreditCard(5367865093344606));
+libraryValidateCard.isValidCreditCard(5367865093344606); // tarjeta válida
+libraryValidateCard.isValidCreditCard(5367865093344636); // tarjeta no válida
+libraryValidateCard.isValidCreditCard('536786509334em06'); // tarjeta no válida que contiene letras
