@@ -2,7 +2,7 @@ window.addEventListener('load', () =>{
   console.log(libraryValidateCard.isValidCreditCard(4567483944758468));
   const form = document.querySelector('form');
   let btnValidate = document.getElementById('btn-validate');
-
+//..
   let validateName = false;
   let validateCode = false;
   let validateDate = false;
