@@ -1,48 +1,48 @@
-window.addEventListener('load', () =>{
-  const form = document.querySelector('form');
-  let btnValidate = document.getElementById('btn-validate');
+'use strict';
 
-  // Creamos la función validate
-  function validate(event) {
-    // Llamamos a todos los input existentes
-    let inputsForm = document.querySelectorAll('input');
-    // Recorremos la lista de nodos
-    for (let i in inputsForm) {
-      console.log(inputsForm[i].name);
-      // Codicionamos para capturar el input que tenga el id name
-      if (inputsForm[i].name === 'name') {
-        // Recorremos la data json
-        for (let j in json) {
-          // Comparamos si el value del input con id name es igual a la propiedad 'name'
-          if (inputsForm[i].value === json[j]['name']) {
-            break;
-          } else {
-            // Aquí se agregaría la modficación para que el input tenga un border rojo, como símbolo de error
-            inputsForm[i].value = '';
-            break;
+var libraryValidateCard = function (window, document) {
+  return {
+    desactiveButton: function desactiveButton() {
+      console.log('Boton que desactiva');
+    },
+    lenghtCard: function lenghtCard(valInput) {
+      if (valInput.toString().length === 16) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    onlyNumbers: function onlyNumbers(valInput) {
+      var onlyNum = /^[0-9]+$/;
+      if (onlyNum.test(valInput)) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    isValidCreditCard: function isValidCreditCard(numberCard) {
+      var onlyNumbersCard = libraryValidateCard.onlyNumbers(libraryValidateCard.lenghtCard(numberCard));
+
+      if (libraryValidateCard.lenghtCard(numberCard) && libraryValidateCard.onlyNumbers(numberCard)) {
+        var reverseNumberCard = numberCard.toString().split('');
+        reverseNumberCard.reverse();
+        var adder = 0;
+
+        for (var i = 0; i < parseInt(reverseNumberCard.length); i++) {
+          if ((i + 1) % 2 === 0) {
+            if (reverseNumberCard[i] * 2 > 9) reverseNumberCard[i] = reverseNumberCard[i] * 2 % 10 + 1;else reverseNumberCard[i] = reverseNumberCard[i] * 2;
           }
-        };
-      } else if (inputsForm[i].name === 'exp') {
-        for (let j in json) {
-          if (inputsForm[i].value === json[j]['expir_date']) {
-            console.log('Fecha idéntica');
-            break;
-          } else {
-            // Aquí se agregaría la modficación para que el input tenga un border rojo, como símbolo de error
-            class wrong {
-              constructor(color) {
-                this.color = red;
-              }
-            }
-            break;
-          }
+          adder += parseInt(reverseNumberCard[i]);
         }
+        return adder % 10 === 0 ? console.log('tarjeta valida') : console.log('Número de tarjeta no válida');
+      } else {
+        console.log('error de validacion de tarjeta');
       }
     }
-    form.addEventListener('submit', validate, false);
-  }
+  };
+}(window, document);
 
-  btnValidate.addEventListener('click', () =>{
-    validate(form);
-  });
-});
+libraryValidateCard.isValidCreditCard(5367865093344606); // tarjeta válida
+libraryValidateCard.isValidCreditCard(5367865093344636); // tarjeta no válida
+libraryValidateCard.isValidCreditCard('536786509334em06'); // tarjeta no válida que contiene letras
+

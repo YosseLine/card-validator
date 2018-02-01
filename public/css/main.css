@@ -11,6 +11,9 @@
 .margin-top-0{
   margin-top: 0;
 }
+.text-black{
+  color: #000;
+}
 .container-flex-column{
 height: 100%;
 display: flex;
@@ -18,8 +21,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-.vh100 {
-height: 100vh;
+.vh90 {
+height: 90vh;
 }
 /*ESTILOS PARA BODY*/
 body{
@@ -29,12 +32,22 @@ body{
   background-size: cover;
   background-attachment: fixed;
 }
+nav{
+  background: #FFF;
+  color: #000;
+}
+nav .brand-logo{
+  color: #000;
+}
 /*ESTILOS PARA EL FORM*/
 form.col.s12{
   background-color: rgba(255,255,255,0.3);
   border: 3px solid #FFF;
   border-radius: 50PX;
   padding: 30px;
+}
+div.row{
+  margin-bottom: 0;
 }
 label{
   color: #000;
@@ -49,11 +62,5 @@ input[type=number]:not(.browser-default), input[type=text]:not(.browser-default)
   }
   section div.container{
     width: : 90% !important;
-  }
-  div.row.margin-desktop-0{
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }

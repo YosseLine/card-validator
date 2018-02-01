@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Validador.js</title>
+  <title>ValidateJS</title>
     <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
     <meta name="theme-color" content="#26a69a"/>
     <link rel="icon" type="image/png" href="public/assets/images/target.png">
@@ -15,19 +15,20 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-  <nav class="teal lighten-1" role="navigation">
+  <!--Header-->
+  <nav role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo text-white">Validatejs</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html" class="text-white">Inicio</a></li>
-        <li><a href="https://github.com/YosseLine/card-validator" class="text-white">GitHub</a></li>
+        <li><a href="views/example.html" class="text-black">Demo</a></li>
+        <li><a href="https://github.com/YosseLine/card-validator" class="text-black">GitHub</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="index.html" class="text-white">Inicio</a></li>
-        <li><a href="https://github.com/YosseLine/card-validator" class="text-white">GitHub</a></li>
+        <li><a href="views/example.html" class="text-white">Demo</a></li>
+        <li><a href="https://github.com/YosseLine/card-validator" class="">GitHub</a></li>
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons text-white">menu</i></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons text-black">menu</i></a>
     </div>
   </nav>
 
@@ -85,20 +86,20 @@
       </div>
       <div class="row">
         <div class="col s12 center">
-          <p class="left-align light"> 1- Como primer requisito, tu archivo html deberá contar con un formulario que cumpla con las siguietes característivas: <br><br> * Tener inputs con un atributo llamado 'name'. <br> * Cada atributo name deberá tener un valor igual al del ejemplo de la imagen. <br> * tu index deberá tener un botón, con el cuál se hará el llamado a la librería.</p>
-          <img src="public/assets/images/form.png" alt="Ejemplo" class="example">
+          <p class="left-align light"> 1- Como primer requisito, tu archivo html deberá contar con un formulario que cumpla con las siguietes característivas: <br><br> * Tener inputs con un atributo llamado 'name'. <br> * Cada atributo name deberá tener un valor igual al del ejemplo de la imagen. <br> * Para que la librería funcione de una mejor manera, lo recomendable es agregar un botón al formulario. </p>
+          <img src="assets/images/form1.png" alt="Ejemplo" class="example">
         </div>
       </div>
       <div class="row">
         <div class="col s12 center">
-          <p class="left-align light"> 2- El segundo requisito, claro está, sería llamar a la librería destu tu archivo js el cuál deberá estar vinculado a tu archivo html.</p>
-          <img src="public/assets/images/form.png" alt="Ejemplo" class="example">
+          <p class="left-align light"> 2- El segundo requisito, claro está, sería llamar a la librería desde un script, ubicado en tu archivo html.</p>
+          <img src="assets/images/form2.png" alt="Ejemplo" class="example">
         </div>
       </div>
       <div class="row">
         <div class="col s12 center">
-          <p class="left-align light">¡Y listo! Solo sigue estos sencillos pasos, deja volar tu imaginación y construye grandes cosas!</p>
-          <img src="public/assets/images/form.png" alt="Ejemplo" class="example">
+          <p class="left-align light">3- El tercer paso, sería invocar a la librería mediante una función ingresada en tu propio archivo js.¡Y listo! Solo sigue estos sencillos pasos, deja volar tu imaginación y construye grandes cosas!</p>
+          <img src="assets/images/form.png" alt="Ejemplo" class="example">
         </div>
       </div>
     </div>
@@ -114,11 +115,11 @@
     <div class="parallax"><img src="https://coyunturaeconomica.com/files/coyuntura/tarjetas%20para%20inmigrantes.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal lighten-1">
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <p class="text-white center">ValidateJS @copyright Todos los derechos reservados.</p>
+          <p class="text-black center">ValidateJS @copyright Todos los derechos reservados</p>
         </div>
       </div>
     </div>
@@ -128,6 +129,6 @@
   <!-- Vínculo de archivos js-->
   <script type="text/javascript" src="public/vendors/jQuery/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript" src="public/vendors/materialize//materialize.js"></script>
+  <script type="text/javascript" src="vendors/materialize/materialize.js"></script>
 </body>
 </html>
