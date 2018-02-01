@@ -14,41 +14,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
-<body class="container-flex-column">
-  <section class="">
+<body>
+
+  <!--header-->
+  <nav role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo text-black">Validatejs</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="../../index.html" class="text-black">Inicio</a></li>
+        <li><a href="https://github.com/YosseLine/card-validator" class="text-black">GitHub</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="../../index.html" class="text-white">Inicio</a></li>
+        <li><a href="https://github.com/YosseLine/card-validator" class="">GitHub</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons text-black">menu</i></a>
+    </div>
+  </nav>
+  <section class="container-flex-column vh90">
     <div class="container">
-      <div class="row margin-desktop-0">
-        <div class="col s12 xl4">
-          <h1 class="center-align">Validador de tarjetas de crédito</h1>
-        </div>
-        <form class="col s12  m10 l12 xl8 offset-m1">
+      <div class="row">
+        <form class="col s12 m12 l12 xl10 offset-xl1">
           <div class="row margin-btm-0">
             <div class="col s12">
               <label for="number-card">Ingrese número de tarjeta</label>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s3 margin-top-0">
-              <input id="cn" type="number" class="validate" name="cn">
-            </div>
-            <div class="input-field col s3 margin-top-0">
-              <input id="cn" type="number" class="validate" name="cn">
-            </div>
-            <div class="input-field col s3 margin-top-0">
-              <input id="cn" type="number" class="validate" name="cn">
-            </div>
-            <div class="input-field col s3 margin-top-0">
+            <div class="input-field col s12 margin-top-0">
               <input id="cn" type="number" class="validate" name="cn">
             </div>
           </div>
           <div class="row margin-btm-0">
             <div class="col s12">
-              <label for="number-card">Ingrese fecha de expiración</label>
+              <label for="number-card">Ingrese fecha de expiración. Ejemplo: 03/12</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-                <input id="exp" type="text" class="datepicker" name="exp">
+                <input id="exp" type="text" class="validate" name="exp">
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -85,6 +90,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/index.js"></script>
   <script type="text/javascript" src="../data.json"></script>
-  <script type="text/javascript" src="../vendors/materialize//materialize.js"></script>
 </body>
 </html>
