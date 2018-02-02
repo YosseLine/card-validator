@@ -6,7 +6,7 @@ var data = [
     'valid_code': '345'
   },
   {
-    'name': 'Selena Lopez Cespedes Rojas',
+    'name': 'SELENA LOPEZ CESPEDES ROJAS',
     'num_card': '4716242339938263',
     'expir_date': '12/19',
     'valid_code': '555'
