@@ -1,4 +1,6 @@
-# Validador de datos de tarjetas de crédito
+# ValidateJS
+
+## Un validador de datos de tarjetas de crédito
 
 * **Track:** _Common Core_
 * **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
@@ -9,11 +11,11 @@
 
 ## Objetivo:
 
-- Construir una librería (library) que facilite la validación de tarjetas de crédito.
+- Construir una librería (library) que facilite la validación de datos tarjetas de crédito, mediante el algoritmo de Luhn.
 
 ***
 
-## Archivos principales icluídos en el repositorio:
+## Archivos principales incluídos en el repositorio:
 
 * README.md
 
@@ -33,11 +35,11 @@
 
 ## Sobre la librería:
 
-- Deberá recibir referencias a un elemento del DOM que contenga `<input>`s con los siguientes nombres (atributo `name`):
+- Deberá recibir referencias a los inputs que contengan:
 
 * `cn` (Card Number): El número de la tarjeta de crédito.
-* `cvv` (Card Verification Value): Código de validación de 3 dígitos.
-* `exp` (Expiry Date): Fecha de expiración.
+* `cvv` (Card Verification Value): El código de validación de 3 dígitos.
+* `exp` (Expiry Date): La fecha de expiración.
 * `name`: Nombre completo como aparece en la tarjeta.
 
 ## Ejemplo
@@ -157,10 +159,14 @@ El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para da
 ## Snippets:
 
 ```
-libraryValidateCard.isValidCreditCard // (888888888888)
-libraryValidateCard.validateCodeVerification // (345)
-libraryValidateCard.validateName // ('Juan Sanchez Rodriguez Trigoso')
-libraryValidateCard.expireDate // ('03/18')
+libraryValidateCard.isValidCreditCard(numCard); // Tarjeta válida.
+libraryValidateCard.isValidCreditCard(5367865093344636); // Tarjeta no válida.
+libraryValidateCard.isValidCreditCard('536786509334em06'); // Tarjeta no válida que contiene letras.
+libraryValidateCard.validateCodeVerification(numCvv); // Valida solo numero.
+libraryValidateCard.validateCodeVerification('1a3'); // En caso de poner una letra es incorrecto.
+
+libraryValidateCard.validateName(nameUser); // Valida el nombre del usuario.
+libraryValidateCard.expireDate(dateCard); // Valida la fecha de expiración de la tarjeta.
 
 ```
 
