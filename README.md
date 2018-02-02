@@ -65,20 +65,6 @@
   <button type="button" name="button">Validar</button>
 </form>
 ```
-
-```js
-const form = document.querySelector('form');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (validateCardDetails(form)) {
-    console.log('datos válido... enviar...');
-  } else {
-    console.log('datos inválidos');
-  }
-});
-```
-
 ## Algoritmo de Luhn:
 
 La construcción de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
@@ -160,14 +146,16 @@ El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para da
 ## Snippets:
 
 ```
-libraryValidateCard.isValidCreditCard(numCard); // Tarjeta válida.
-libraryValidateCard.isValidCreditCard(5367865093344636); // Tarjeta no válida.
-libraryValidateCard.isValidCreditCard('536786509334em06'); // Tarjeta no válida que contiene letras.
-libraryValidateCard.validateCodeVerification(numCvv); // Valida solo numero.
-libraryValidateCard.validateCodeVerification('1a3'); // En caso de poner una letra es incorrecto.
 
-libraryValidateCard.validateName(nameUser); // Valida el nombre del usuario.
-libraryValidateCard.expireDate(dateCard); // Valida la fecha de expiración de la tarjeta.
+// Para validar campos
+libraryValidateCard.isValidCreditCard(numCard); // Número de tarjeta
+libraryValidateCard.validateCodeVerification(numCvv); // Número cvv
+libraryValidateCard.validateName(nameUser); // Nombre del usuario
+libraryValidateCard.expireDate(dateCard); // fecha
+
+// Para enviar data y Validar usar:
+
+libraryValidateCard.getValue(numCard, numcvv, nameUser, dateCard);
 
 ```
 

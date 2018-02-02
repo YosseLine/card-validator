@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Validador de tarjetas de crédito</title>
-    <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
-    <meta name="theme-color" content="#26a69a"/>
-    <link rel="icon" type="image/png" href="../assets/images/target.png">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+  <!--Añadiendo color a la barra de navegador que se verá desde versión mobile-->
+  <meta name="theme-color" content="#26a69a" />
+  <link rel="icon" type="image/png" href="../assets/images/target.png">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
 
   <!--header-->
@@ -32,6 +34,17 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons text-black">menu</i></a>
     </div>
   </nav>
+  <section class="container">
+    <div class="row">
+      <div class="col s12 m12 l12 xl10 offset-xl1">
+        <h3>Nombre: Selena Lopez Cespedes Rojas</h3>
+        <p>Número de tarjeta: <span>4716242339938263</span></p>
+        <p>Fecha de caducidad:<span>12/19</span></p>
+        <p>CVV:<span>555</span></p>
+      </div>
+    </div>
+
+  </section>
   <section class="container-flex-column vh90">
     <div class="container">
       <div class="row">
@@ -53,7 +66,7 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-                <input id="exp" type="text" class="validate" name="exp">
+              <input id="exp" type="text" class="validate" name="exp">
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -92,4 +105,5 @@
   <script type="text/javascript" src="../js/data.js"></script>
   <script type="text/javascript" src="../js/app.js"></script>
 </body>
+
 </html>
