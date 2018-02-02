@@ -3,25 +3,21 @@
 var libraryValidateCard = function (window, document) {
   return {
     desactiveButton: function desactiveButton(idButton) {
-      document.getElementById(idButton).setAttribute('disabled', true);
+      document.getElementById('btn-validate').setAttribute('disabled', true);
     },
     activeButton: function activeButton(idButton) {
-      document.getElementById(idButton).setAttribute('disabled', false);
+      document.getElementById('btn-validate').setAttribute('disabled', false);
     },
     lenghtCard: function lenghtCard(valInput) {
-      if (valInput.toString().length === 16) {
-        return true;
-      } else {
-        return false;
-      }
+      valInput.toString().length === 16 ? true : false;
     },
     onlyNumbers: function onlyNumbers(valInput) {
       var onlyNum = /^[0-9]+$/;
-      if (onlyNum.test(valInput)) return true;else return false;
+      onlyNum.test(valInput) ? true : false;
     },
     onlyText: function onlyText(valName) {
       var onlyLetters = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
-      if (onlyLetters.test(valName)) return true;else return false;
+      onlyLetters.test(valName) ? true : false;
     },
     isValidCreditCard: function isValidCreditCard(numberCard) {
       if (libraryValidateCard.lenghtCard(numberCard) && libraryValidateCard.onlyNumbers(numberCard)) {
@@ -35,15 +31,15 @@ var libraryValidateCard = function (window, document) {
           }
           adder += parseInt(reverseNumberCard[i]);
         }
-        return adder % 10 === 0 ? true : console.log('Número de tarjeta no válida');
+        return adder % 10 === 0 ? true : false;
       } else {
-        console.log('error de validacion de tarjeta');
+        alert('Verifique el número de tarjeta ingresado');
       }
     },
     validateCodeVerification: function validateCodeVerification(codeCvv) {
       if (libraryValidateCard.isValidCreditCard(numCard) && codeCvv.toString().length === 3 && libraryValidateCard.onlyNumbers(codeCvv)) {
         return true;
-      } else console.log('incorrecto');
+      } else alert('El código CVV ingresado no coincide con el número de tarjeta, vuelva a ingresar');
     },
     validateName: function validateName(name) {
       if (libraryValidateCard.validateCodeVerification(numCvv)) {
@@ -73,7 +69,7 @@ var libraryValidateCard = function (window, document) {
     expireDate: function expireDate(date) {
       if (libraryValidateCard.validateName(nameUser) && libraryValidateCard.dateFormat(dateCard)) {
         if (libraryValidateCard.existDate(dateCard)) {
-          alert('La fecha introducida es correcta.');
+          libraryValidateCard.activeButton();
         } else {
           alert('La fecha introducida no existe.');
         }
@@ -83,15 +79,3 @@ var libraryValidateCard = function (window, document) {
     }
   };
 }(window, document);
-var numCard = 5157183686604830; // pasamos este numero de tarjeta valido a la funcion en la linea 47
-var numCvv = 123;
-var nameUser = 'Margarita Flores';
-var dateCard = '13/09/2020';
-libraryValidateCard.isValidCreditCard(numCard); // tarjeta válida 
-// libraryValidateCard.isValidCreditCard(5367865093344636); // tarjeta no válida
-// libraryValidateCard.isValidCreditCard('536786509334em06'); // tarjeta no válida que contiene letras
-libraryValidateCard.validateCodeVerification(numCvv); // valida solo numero
-// libraryValidateCard.validateCodeVerification('1a3'); // en caso de poner una letra es incorrecto
-
-libraryValidateCard.validateName(nameUser);
-libraryValidateCard.expireDate(dateCard);
