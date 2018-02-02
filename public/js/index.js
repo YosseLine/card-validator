@@ -1,6 +1,6 @@
 'use strict';
 
-var libraryValidateCard = function (window, document) {
+var libraryValidateCard = function(window, document) {
   return {
     desactiveButton: function desactiveButton(idButton) {
       document.getElementById('btn-validate').setAttribute('disabled', true);
