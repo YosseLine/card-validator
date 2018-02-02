@@ -142,9 +142,10 @@ El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para da
 
 - Se continuó con la aplicación de la librería y el maquetado del archivo example.html
 
-### Día 8:
+### Día 8 y 9:
 
-**MIÉRCOLES: 31/01/2017**
+**MIÉRCOLES: 31/01/2017
+  JUEVES: 01/01/2017**
 
 - Se dieron los últimos detalles al proyecto.
 
