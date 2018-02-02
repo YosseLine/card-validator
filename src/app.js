@@ -13,15 +13,15 @@ window.addEventListener('load', () =>{
     else
       $('#btn-validate').attr('disabled', true);
   });
-
+/*
   nameValue.addEventListener('keyup', () => {
     console.log(libraryValidateCard.validateName(nameValue.value));
     if (libraryValidateCard.validateName(nameValue.value))
-      $('#btn-validate').prop('disabled', false);
+    $('#btn-validate').attr('disabled',false);
     else
-      $('#btn-validate').prop('disabled', true);
+    $('#btn-validate').attr('disabled', true);
   });
-
+*/
 
   btnValidate.addEventListener('click', () =>{
     if ((data[1].name === nameValue.value) && (data[1].num_card === cardNumberValue.value) && (data[1].valid_code === numberCvv.value) && (data[1].expir_date === dateValue.value)) {

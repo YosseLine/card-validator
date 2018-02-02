@@ -12,11 +12,15 @@ window.addEventListener('load', function () {
     console.log(libraryValidateCard.isValidCreditCard(cardNumberValue.value));
     if (libraryValidateCard.isValidCreditCard(cardNumberValue.value)) $('#btn-validate').attr('disabled', false);else $('#btn-validate').attr('disabled', true);
   });
-
-  nameValue.addEventListener('keyup', function () {
-    console.log(libraryValidateCard.validateName(nameValue.value));
-    if (libraryValidateCard.validateName(nameValue.value)) $('#btn-validate').prop('disabled', false);else $('#btn-validate').prop('disabled', true);
-  });
+  /*
+    nameValue.addEventListener('keyup', () => {
+      console.log(libraryValidateCard.validateName(nameValue.value));
+      if (libraryValidateCard.validateName(nameValue.value))
+      $('#btn-validate').attr('disabled',false);
+      else
+      $('#btn-validate').attr('disabled', true);
+    });
+  */
 
   btnValidate.addEventListener('click', function () {
     if (data[1].name === nameValue.value && data[1].num_card === cardNumberValue.value && data[1].valid_code === numberCvv.value && data[1].expir_date === dateValue.value) {
