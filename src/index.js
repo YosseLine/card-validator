@@ -43,7 +43,8 @@ let libraryValidateCard = ((window, document) => {
         }
         return (adder % 10 === 0) ? true : false;
       } else {
-        alert('Verifique el número de tarjeta ingresado');
+        return false;
+        //alert('Verifique el número de tarjeta ingresado');
       }
     },
     validateCodeVerification: (codeCvv) => {
@@ -53,8 +54,10 @@ let libraryValidateCard = ((window, document) => {
         alert('El código CVV ingresado no coincide con el número de tarjeta, vuelva a ingresar');
     },
     validateName: (name) => {
-      libraryValidateCard.onlyText(name);
-      return true; 
+      if (libraryValidateCard.onlyText(name))
+        return true; 
+      else 
+        return false;
     },
     dateFormat: (date) => {
       let format = /^\d{1,2}\/\d{2,4}$/;
