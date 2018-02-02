@@ -16,7 +16,8 @@ var libraryValidateCard = function (window, document) {
       if (onlyNum.test(valInput)) return true;else return false;
     },
     onlyText: function onlyText(valName) {
-      var onlyLetters = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+      // let onlyLetters = /^([A-ZÁÉÍÓÚ]{0}[a-zñáéíóú]+[\s]*)+$/;
+      var onlyLetters = /^([A-ZÁÉÍÓÚ]+[\s]*)+$/;
       if (onlyLetters.test(valName)) return true;else return false;
     },
     isValidCreditCard: function isValidCreditCard(numberCard) {
@@ -40,7 +41,7 @@ var libraryValidateCard = function (window, document) {
     validateCodeVerification: function validateCodeVerification(codeCvv) {
       if (codeCvv.toString().length === 3 && libraryValidateCard.onlyNumbers(codeCvv)) {
         return true;
-      } else alert('El código CVV ingresado no coincide con el número de tarjeta, vuelva a ingresar');
+      } else return false;
     },
     validateName: function validateName(name) {
       if (libraryValidateCard.onlyText(name)) return true;else return false;
