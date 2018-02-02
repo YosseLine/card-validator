@@ -10,8 +10,14 @@
 .text-white{
   color: #FFF;
 }
+.margin-btm-2{
+  margin-bottom: 2vh;
+}
 img.example{
   width: 100%;
+}
+body p{
+  font-size: 18px;
 }
 nav, footer.page-footer{
   color: #000;
