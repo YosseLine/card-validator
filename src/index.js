@@ -7,15 +7,24 @@ let libraryValidateCard = ((window, document) => {
       document.getElementById('btn-validate').setAttribute('disabled', false);
     },
     lenghtCard: (valInput) => {
-      (valInput.toString().length === 16) ? true : false;
+      if ((valInput.toString().length === 16)) 
+        return true;
+      else
+        return false;
     },
     onlyNumbers: (valInput) => {
       let onlyNum = /^[0-9]+$/;
-      (onlyNum.test(valInput)) ? true : false;
+      if ((onlyNum.test(valInput)))
+        return true;
+      else
+        return false;
     },
     onlyText: (valName) => {
       let onlyLetters = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
-      (onlyLetters.test(valName)) ? true : false;
+      if ((onlyLetters.test(valName)))
+        return true;
+      else
+        return false;
     },
     isValidCreditCard: (numberCard) => {
       if (libraryValidateCard.lenghtCard(numberCard) && libraryValidateCard.onlyNumbers(numberCard)) {
@@ -38,28 +47,25 @@ let libraryValidateCard = ((window, document) => {
       }
     },
     validateCodeVerification: (codeCvv) => {
-      if ((libraryValidateCard.isValidCreditCard(numCard)) && (codeCvv.toString().length === 3) && libraryValidateCard.onlyNumbers(codeCvv)) {
+      if ((codeCvv.toString().length === 3) && libraryValidateCard.onlyNumbers(codeCvv)) {
         return true;  
       } else 
         alert('El código CVV ingresado no coincide con el número de tarjeta, vuelva a ingresar');
     },
     validateName: (name) => {
-      if (libraryValidateCard.validateCodeVerification(numCvv)) {
-        libraryValidateCard.onlyText(name);
-        return true; 
-      } 
+      libraryValidateCard.onlyText(name);
+      return true; 
     },
     dateFormat: (date) => {
-      let format = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-      if ((date.match(format)) && (date !== '')) {
-        return true;
+      let format = /^\d{1,2}\/\d{2,4}$/;
+      if (!validformat.test(input.value)) {
+        alert('Invalid Date Format. Please correct and submit again.');
       } else {
-        return false;
+        return true;
       }
     },
     existDate: (date) => {
       var datef = date.split('/');
-      var day = datef[0];
       var month = datef[1];
       var year = datef[2];
       var newDate = new Date(year, month, '0');
@@ -69,8 +75,8 @@ let libraryValidateCard = ((window, document) => {
       return true;
     },
     expireDate: (date) => {
-      if (libraryValidateCard.validateName(nameUser) && libraryValidateCard.dateFormat(dateCard)) {
-        if (libraryValidateCard.existDate(dateCard)) {
+      if (libraryValidateCard.dateFormat(date)) {
+        if (libraryValidateCard.existDate(date)) {
           libraryValidateCard.activeButton();
         } else {
           alert('La fecha introducida no existe.');
@@ -78,9 +84,13 @@ let libraryValidateCard = ((window, document) => {
       } else {
         alert('El formato de la fecha es incorrecto.');
       }
+    },
+    getValue: (nCard, cvv, name) => {
+      libraryValidateCard.isValidCreditCard(nCard);
+      // libraryValidateCard.expireDate(date);
+      libraryValidateCard.validateCodeVerification(cvv);
+      libraryValidateCard.validateName(name);
+      alert('Su tarjeta es válida');
     }
   };
 })(window, document);
-
-
-
