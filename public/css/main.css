@@ -24,7 +24,14 @@ align-items: center;
 .vh90 {
 height: 90vh;
 }
-
+/*ESTILOS PARA BODY*/
+body{
+  background-image: url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/121172/121172_00_2x.jpg?20170515031019');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 nav{
   background: #FFF;
   color: #000;
