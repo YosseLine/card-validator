@@ -35,7 +35,7 @@ var libraryValidateCard = function(window, document) {
         return adder % 10 === 0 ? true : false;
       } else {
         return false;
-        //alert('Verifique el número de tarjeta ingresado');
+        // alert('Verifique el número de tarjeta ingresado');
       }
     },
     validateCodeVerification: function validateCodeVerification(codeCvv) {
