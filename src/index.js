@@ -20,7 +20,8 @@ let libraryValidateCard = ((window, document) => {
         return false;
     },
     onlyText: (valName) => {
-      let onlyLetters = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+      // let onlyLetters = /^([A-ZÁÉÍÓÚ]{0}[a-zñáéíóú]+[\s]*)+$/;
+      let onlyLetters = /^([A-ZÁÉÍÓÚ]+[\s]*)+$/;
       if ((onlyLetters.test(valName)))
         return true;
       else
@@ -43,18 +44,21 @@ let libraryValidateCard = ((window, document) => {
         }
         return (adder % 10 === 0) ? true : false;
       } else {
-        alert('Verifique el número de tarjeta ingresado');
+        return false;
+        //alert('Verifique el número de tarjeta ingresado');
       }
     },
     validateCodeVerification: (codeCvv) => {
       if ((codeCvv.toString().length === 3) && libraryValidateCard.onlyNumbers(codeCvv)) {
         return true;  
       } else 
-        alert('El código CVV ingresado no coincide con el número de tarjeta, vuelva a ingresar');
+        return false;
     },
     validateName: (name) => {
-      libraryValidateCard.onlyText(name);
-      return true; 
+      if (libraryValidateCard.onlyText(name))
+        return true; 
+      else 
+        return false;
     },
     dateFormat: (date) => {
       let format = /^\d{1,2}\/\d{2,4}$/;
