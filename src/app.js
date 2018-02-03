@@ -6,26 +6,34 @@ window.addEventListener('load', () =>{
   let numberCvv = document.getElementById('cv');
   let dateValue = document.getElementById('exp'); 
 
+  let activeButton = () => {
+    btnValidate.setAttribute('disabled', false);
+  }; 
+
+  let desactiveButton = () => {  
+    btnValidate.setAttribute('disabled', true);
+  }; 
+
   cardNumberValue.addEventListener('keyup', () => {
     if (libraryValidateCard.isValidCreditCard(cardNumberValue.value))
-      $('#btn-validate').attr('disabled',false);
+      activeButton();
     else
-      $('#btn-validate').attr('disabled', true);
+      desactiveButton();
   });
 
   nameValue.addEventListener('keyup', () => {
     nameValue.value = nameValue.value.toUpperCase();
     if (libraryValidateCard.validateName(nameValue.value))
-      $('#btn-validate').attr('disabled',false);
+      activeButton();
     else
-      $('#btn-validate').attr('disabled', true);
+      desactiveButton();
   });
 
   numberCvv.addEventListener('keyup', () => {
     if (libraryValidateCard.validateCodeVerification(numberCvv.value))
-      $('#btn-validate').attr('disabled',false);
+      activeButton();
     else
-      $('#btn-validate').attr('disabled', true);
+      desactiveButton();
   });
 
 

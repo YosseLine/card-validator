@@ -1,11 +1,5 @@
 let libraryValidateCard = ((window, document) => {
   return {
-    desactiveButton: (idButton) => {
-      document.getElementById('btn-validate').setAttribute('disabled', true);
-    },
-    activeButton: (idButton) => {
-      document.getElementById('btn-validate').setAttribute('disabled', false);
-    },
     lenghtCard: (valInput) => {
       if ((valInput.toString().length === 16)) 
         return true;
