@@ -4,7 +4,7 @@ window.addEventListener('load', () =>{
   let nameValue = document.getElementById('name');
   let cardNumberValue = document.getElementById('cn');
   let numberCvv = document.getElementById('cv');
-  let dateValue = document.getElementById('exp'); 
+  let dateValue = document.getElementById('exp');
 
   let activeButton = () => {
     btnValidate.setAttribute('disabled', false);
@@ -49,4 +49,3 @@ window.addEventListener('load', () =>{
     }
   });
 });
-
