@@ -5,7 +5,7 @@ window.addEventListener('load', () =>{
   let cardNumberValue = document.getElementById('cn');
   let numberCvv = document.getElementById('cv');
   let dateValue = document.getElementById('exp');
-  
+
   cardNumberValue.addEventListener('keyup', () => {
     // limitamos los input a 15 o 16 digitos
     if (cardNumberValue.value.toString().length >= 15 && cardNumberValue.value.toString().length <= 16) {
@@ -16,11 +16,11 @@ window.addEventListener('load', () =>{
         msgAlert(cardNumberValue, false);
     } else if (cardNumberValue.value.toString().length > 16) {
       cardNumberValue.value = cardNumberValue.value.substring(0, 16);
-    } 
+    }
   });
 
   dateValue.addEventListener('keyup', () => {
-    if (!libraryValidateCard.expireDate(dateValue.value)) 
+    if (!libraryValidateCard.expireDate(dateValue.value))
       msgAlert(dateValue, true);
     else
       msgAlert(dateValue, false);
@@ -28,7 +28,7 @@ window.addEventListener('load', () =>{
 
   nameValue.addEventListener('keyup', () => {
     nameValue.value = nameValue.value.toUpperCase();
-    if (!libraryValidateCard.validateName(nameValue.value)) 
+    if (!libraryValidateCard.validateName(nameValue.value))
       msgAlert(nameValue, true);
     else
       msgAlert(nameValue, false);
@@ -42,7 +42,7 @@ window.addEventListener('load', () =>{
         msgAlert(numberCvv, false);
     } else if (numberCvv.value.toString().length > 4) {
       numberCvv.value = numberCvv.value.substring(0, 4);
-    } 
+    }
   });
 
   btnValidate.addEventListener('click', () =>{
@@ -58,10 +58,10 @@ window.addEventListener('load', () =>{
           numberCvv.value = '';
           dateValue.value = '';
         }
-      } 
+      }
     }
     if (flag === true) {
-      alert('Tarjeta válida');
+      alert('Tarjeta válida')
     } else {
       alert('Oh no! Tarjeta inválida');
     }
@@ -74,5 +74,3 @@ function msgAlert(target, option) {
   else
     target.parentElement.lastElementChild.style.display = 'none';
 }
-
-

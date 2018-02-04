@@ -1,4 +1,4 @@
-# ValidateJS
+# ValiCardJS
 
 ## Un validador de datos de tarjetas de crédito
 
@@ -36,17 +36,18 @@
 ## Sobre la librería:
 
 - Recibe referencias a los inputs que contengan:
-- La librería al solo recibir valores, y retornar true o false según sea la validación, hacen que la libería sea adaptable y pueda trabajar con otras librerías como Jquery por ejemplo.
 
 * `cn` (Card Number): El número de la tarjeta de crédito.
 * `cvv` (Card Verification Value): El código de validación de 3 o 4 dígitos, según sea el caso.
 * `exp` (Expiry Date): La fecha de expiración.
 * `name`: Nombre completo como aparece en la tarjeta.
 
+- La librería al solo recibir valores, y retornar true o false según sea la validación, hacen que ésta sea adaptable y pueda trabajar con otras librerías, como Jquery por ejemplo.
+
 ## Algoritmo de Luhn:
 
-La corazón de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
-El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada multiplicando dígitos adyacentes por constantes distintas (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
+El corazón de la librería se basa en el algoritmo de Luhn Éste algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
+El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada, multiplicando dígitos adyacentes por constantes distintas, (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
 
   1. Se multiplican los dígitos impares por 2.
   2. Si del producto resultan dos dígitos, sus cifras se suman para obtener un único término.
