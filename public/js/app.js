@@ -16,6 +16,10 @@ window.addEventListener('load', function () {
     }
   });
 
+  dateValue.addEventListener('keyup', function () {
+    if (!libraryValidateCard.expireDate(dateValue.value)) msgAlert(dateValue, true);else msgAlert(dateValue, false);
+  });
+
   nameValue.addEventListener('keyup', function () {
     nameValue.value = nameValue.value.toUpperCase();
     if (!libraryValidateCard.validateName(nameValue.value)) msgAlert(nameValue, true);else msgAlert(nameValue, false);
@@ -31,11 +35,11 @@ window.addEventListener('load', function () {
 
   btnValidate.addEventListener('click', function () {
     var flag = false;
-    if (libraryValidateCard.getValue(cardNumberValue.value, numberCvv.value, nameValue.value)) {
+    if (libraryValidateCard.getValue(cardNumberValue.value, dateValue.value, numberCvv.value, nameValue.value)) {
       // let tarjetasMatch = data.filter(data => data.name.toUpperCase() === nameValue.value && data.num_card === cardNumberValue.value && data.valid_code === numberCvv.value);
       // if (tarjetasMatch.length > 1) flag = true;
       for (var i in data) {
-        if (data[i].name.toUpperCase() === nameValue.value && data[i].num_card === cardNumberValue.value && data[i].valid_code === numberCvv.value) {
+        if (data[i].name.toUpperCase() === nameValue.value && data[i].expir_date === dateValue.value && data[i].num_card === cardNumberValue.value && data[i].valid_code === numberCvv.value) {
           flag = true;
           nameValue.value = '';
           cardNumberValue.value = '';

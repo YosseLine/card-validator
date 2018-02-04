@@ -54,37 +54,32 @@ let libraryValidateCard = ((window, document) => {
         return false;
     },
     dateFormat: (date) => {
-      let format = /^\d{1,2}\/\d{2,4}$/;
-      if (!validformat.test(input.value)) {
-        return false;
-      } else {
+      let RegExPattern = /^\d{1,2}\/\d{2}$/;
+      if ((date.match(RegExPattern)) && (date !== '')) {
         return true;
+      } else {
+        return false;
       }
     },
-    existDate: (date) => {
-      var datef = date.split('/');
-      var month = datef[1];
-      var year = datef[2];
-      var newDate = new Date(year, month, '0');
-      if ((day - 0) > (newDate.getDate() - 0)) {
+    existDate: (dateV) => {
+      let fechaf = dateV.split('/');
+      let month = fechaf[1];
+      let year = fechaf[2];
+      let date = new Date(year, month, '0');
+      if (date.getDate() - 0) {
         return false;
       }
       return true;
     },
     expireDate: (date) => {
-      if (libraryValidateCard.dateFormat(date)) {
-        if (libraryValidateCard.existDate(date)) {
-          return true;
-        } else {
-          return false;
-        }
-      } else {
+      if ((libraryValidateCard.dateFormat(date)) && (libraryValidateCard.existDate(date))) 
+        return true;
+      else 
         return false;
-      }
     },
-    getValue: (nCard, cvv, name) => {
+    getValue: (nCard, date, cvv, name) => {
       libraryValidateCard.isValidCreditCard(nCard);
-      // libraryValidateCard.expireDate(date);
+      libraryValidateCard.expireDate(date);
       libraryValidateCard.validateCodeVerification(cvv, nCard);
       libraryValidateCard.validateName(name);
       return true;

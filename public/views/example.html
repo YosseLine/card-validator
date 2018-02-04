@@ -34,15 +34,59 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons text-black">menu</i></a>
     </div>
   </nav>
-  <section class="container-flex-column vh90">
+  <section class="container-flex-column">
     <div class="container">
       <div class="row">
         <div class="col s12 m6 l6 xl6">
           <div class="box-data">
-            <p>Nombre: Selena Lopez Cespedes Rojas</p>
-            <p>Número de tarjeta: <span>4716242339938263</span></p>
-            <p>Fecha de caducidad:<span>12/19</span></p>
-            <p>CVV:<span>555</span></p>
+            <div class="row">
+              <h5>Prueba la demo con:</h5>
+              <div class="col s6">
+                <p>Nombre: Juan Sanchez Rodriguez</p>
+                <p>Número de tarjeta: <span>6011994186353106</span></p>
+                <p>Fecha de caducidad:<span>05/18</span></p>
+                <p>CVC:<span>345</span></p>
+              </div>
+              <div class="col s3">
+                <img src="../assets/images/discover-logo.png" class="responsive-img" alt="">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col s6">
+                <p>Nombre: Selena Lopez Rojas</p>
+                <p>Número de tarjeta: <span>4556110584662263</span></p>
+                <p>Fecha de caducidad:<span>12/19</span></p>
+                <p>CVC:<span>555</span></p>
+              </div>
+              <div class="col s3">
+                <img src="../assets/images/visa-logo.svg" class="responsive-img" alt="">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col s6">
+                <p>Nombre: Yuriko Ramos Velazques</p>
+                <p>Número de tarjeta: <span>5206136465795014</span></p>
+                <p>Fecha de caducidad:<span>03/18</span></p>
+                <p>CVC:<span>005</span></p>
+              </div>
+              <div class="col s3">
+                <img src="../assets/images/MasterCard_logo.png" class="responsive-img" alt="">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col s6">
+                <p>Nombre: Yelina Lauren Caceres</p>
+                <p>Número de tarjeta: <span>372087051967187</span></p>
+                <p>Fecha de caducidad:<span>05/19</span></p>
+                <p>CVC:<span>6784</span></p>
+              </div>
+              <div class="col s3">
+                <img src="../assets/images/amex-logo.svg" class="responsive-img" alt="logo">
+              </div>
+            </div>
           </div>
         </div>
         <form class="col s12 m6 l6 xl6">
@@ -54,7 +98,7 @@
           <div class="row">
             <div class="input-field col s12 margin-top-0">
               <input id="cn" type="number" class="validate" name="cn" maxlength="16">
-              <span class="alert" style="display:none" id="alertcn">Inserte un numero de tarjeta valida</span>
+              <span class="alert" style="display:block" id="alertcn">Inserte un numero de tarjeta valida</span>
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -65,6 +109,7 @@
           <div class="row">
             <div class="input-field col s12">
               <input id="exp" type="text" class="validate" name="exp">
+              <span class="alert" style="display:block" id="alertdate">Verifique la fecha de caducidad</span>
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -75,7 +120,7 @@
           <div class="row">
             <div class="input-field col s12 margin-top-0">
               <input id="cv" type="number" class="validate" name="cv">
-              <span class="alert" style="display:none" id="alertcvc">Codigo CVC no valido</span>
+              <span class="alert" style="display:block" id="alertcvc">Codigo CVC no valido</span>
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -86,7 +131,7 @@
           <div class="row">
             <div class="input-field col s12 margin-top-0">
               <input id="name" type="text" class="validate" name="name">
-              <span class="alert" style="display:none" id="alertname">Verifique su nombre</span>
+              <span class="alert" style="display:block" id="alertname">Verifique su nombre</span>
             </div>
           </div>
           <div class="row">

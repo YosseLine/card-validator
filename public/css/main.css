@@ -21,9 +21,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-.vh90 {
-height: 90vh;
-}
 
 nav{
   background: #4db6ac;
@@ -34,9 +31,6 @@ nav .brand-logo{
 }
 /*ESTILOS PARA EL FORM*/
 form.col.s12{
-  background-color: rgba(255,255,255,0.3);
-  border: 3px solid #FFF;
-  border-radius: 50PX;
   padding: 30px;
 }
 div.row{

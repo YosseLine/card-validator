@@ -17,6 +17,13 @@ window.addEventListener('load', () =>{
     } 
   });
 
+  dateValue.addEventListener('keyup', () => {
+    if (!libraryValidateCard.expireDate(dateValue.value)) 
+      msgAlert(dateValue, true);
+    else
+      msgAlert(dateValue, false);
+  });
+
   nameValue.addEventListener('keyup', () => {
     nameValue.value = nameValue.value.toUpperCase();
     if (!libraryValidateCard.validateName(nameValue.value)) 
@@ -39,11 +46,11 @@ window.addEventListener('load', () =>{
 
   btnValidate.addEventListener('click', () =>{
     let flag = false;
-    if (libraryValidateCard.getValue(cardNumberValue.value, numberCvv.value, nameValue.value)) {
+    if (libraryValidateCard.getValue(cardNumberValue.value, dateValue.value, numberCvv.value, nameValue.value)) {
       // let tarjetasMatch = data.filter(data => data.name.toUpperCase() === nameValue.value && data.num_card === cardNumberValue.value && data.valid_code === numberCvv.value);
       // if (tarjetasMatch.length > 1) flag = true;
       for (let i in data) {
-        if ((data[i].name.toUpperCase() === nameValue.value) && (data[i].num_card === cardNumberValue.value) && (data[i].valid_code === numberCvv.value)) {
+        if ((data[i].name.toUpperCase() === nameValue.value) && (data[i].expir_date === dateValue.value) && (data[i].num_card === cardNumberValue.value) && (data[i].valid_code === numberCvv.value)) {
           flag = true;
           nameValue.value = '';
           cardNumberValue.value = '';
