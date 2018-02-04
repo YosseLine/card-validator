@@ -19,7 +19,7 @@
 
 * README.md
 
-* index.js: Aquí se ubicará la funcionalidad de la librería.
+* index.js: Aquí se ubica la funcionalidad de la librería.
 
 * index.html: Archivo html que explica el uso de la librería.
 
@@ -35,39 +35,17 @@
 
 ## Sobre la librería:
 
-- Deberá recibir referencias a los inputs que contengan:
+- Recibe referencias a los inputs que contengan:
+- La librería al solo recibir valores, y retornar true o false según sea la validación, hacen que la libería sea adaptable y pueda trabajar con otras librerías como Jquery por ejemplo.
 
 * `cn` (Card Number): El número de la tarjeta de crédito.
-* `cvv` (Card Verification Value): El código de validación de 3 dígitos.
+* `cvv` (Card Verification Value): El código de validación de 3 o 4 dígitos, según sea el caso.
 * `exp` (Expiry Date): La fecha de expiración.
 * `name`: Nombre completo como aparece en la tarjeta.
 
-## Ejemplo
-
-```html
-<form>
-  <div class="form-group">
-    <label for="cn">Número de tarjeta</label>
-    <input id="cn" name="cn" />
-  </div>
-  <div class="form-group">
-    <label for="exp">Fecha de vencimiento</label>
-    <input id="exp" name="exp" />
-  </div>
-  <div class="form-group">
-    <label for="cvv">CVV</label>
-    <input id="cvv" name="cvv" />
-  </div>
-  <div class="form-group">
-    <label for="name">Nombre completo</label>
-    <input id="name" name="name" />
-  </div>
-  <button type="button" name="button">Validar</button>
-</form>
-```
 ## Algoritmo de Luhn:
 
-La construcción de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
+La corazón de la librería se basa en el algoritmo de Luhn, este algoritmo es una fórmula de suma de verificación, utilizada para validar una diversidad de números de identificación; como números de tarjetas de crédito, números IMEI, etc.
 El Algoritmo Luhn se basa en el concepto de módulo 10, pero lo modifica para darle robustez. La idea se basa en hacer una suma ponderada multiplicando dígitos adyacentes por constantes distintas (en este caso 1 o 2) para detectar el intercambio de éstos. Los pasos son los siguientes:
 
   1. Se multiplican los dígitos impares por 2.
@@ -153,7 +131,7 @@ libraryValidateCard.validateCodeVerification(numCvv); // Número cvv
 libraryValidateCard.validateName(nameUser); // Nombre del usuario
 libraryValidateCard.expireDate(dateCard); // fecha
 
-// Para enviar data y Validar usar:
+// Para enviar data y Validar:
 
 libraryValidateCard.getValue(numCard, numcvv, nameUser, dateCard);
 
