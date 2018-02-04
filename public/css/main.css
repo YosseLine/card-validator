@@ -14,6 +14,12 @@
 .text-black{
   color: #fff;
 }
+.margin-btm-2{
+  margin-bottom: 2vh;
+}
+.margin-top-2{
+  margin-top: 2vh;
+}
 .container-flex-column{
 height: 100%;
 display: flex;
@@ -21,19 +27,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-/*
-Aqui habia conflicto y no sé si borrar, revisa y borras si no es util
-.vh90 {
-height: 90vh;
-}
-
-body{
-  background-image: url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/121172/121172_00_2x.jpg?20170515031019');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-} */
 nav{
   background: #4db6ac;
   color: #fff;
@@ -41,11 +34,11 @@ nav{
 nav .brand-logo{
   color: #fff;
 }
-/*ESTILOS PARA EL FORM*/
-form.col.s12{
-  padding: 30px;
+hr.hr-color, hr.margin-top-2.margin-btm-2.hr-color{
+  background: #4db6ac;
 }
-div.row{
+/*ESTILOS PARA EL FORM*/
+form div.row{
   margin-bottom: 0;
 }
 label{
@@ -53,6 +46,7 @@ label{
 }
 input[type=number]:not(.browser-default), input[type=text]:not(.browser-default){
   border-bottom: 1px solid #000;
+  margin-bottom: 0;
 }
 
 span.alert {

@@ -57,7 +57,9 @@ code {
   display: block;
   line-height: .5px;
 }
-
+i.material-icons{
+  margin-left: 2vw;
+}
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
