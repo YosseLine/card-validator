@@ -1,7 +1,7 @@
 let libraryValidateCard = ((window, document) => {
   return {
     lenghtCard: (valInput) => {
-      if ((valInput.toString().length === 16)) 
+      if (valInput.toString().length >= 15 && valInput.toString().length <= 16) 
         return true;
       else
         return false;
@@ -14,7 +14,6 @@ let libraryValidateCard = ((window, document) => {
         return false;
     },
     onlyText: (valName) => {
-      // let onlyLetters = /^([A-ZÁÉÍÓÚ]{0}[a-zñáéíóú]+[\s]*)+$/;
       let onlyLetters = /^([A-ZÁÉÍÓÚ]+[\s]*)+$/;
       if ((onlyLetters.test(valName)))
         return true;
@@ -26,7 +25,6 @@ let libraryValidateCard = ((window, document) => {
         let reverseNumberCard = numberCard.toString().split('');
         reverseNumberCard.reverse();
         let adder = 0; 
-
         for (var i = 0; i < parseInt(reverseNumberCard.length); i++) { 
           if ((i + 1) % 2 === 0) {
             if (reverseNumberCard[i] * 2 > 9)
@@ -39,12 +37,13 @@ let libraryValidateCard = ((window, document) => {
         return (adder % 10 === 0) ? true : false;
       } else {
         return false;
-        //alert('Verifique el número de tarjeta ingresado');
       }
     },
-    validateCodeVerification: (codeCvv) => {
-      if ((codeCvv.toString().length === 3) && libraryValidateCard.onlyNumbers(codeCvv)) {
+    validateCodeVerification: (codeCvv, numberCard) => {
+      if ((codeCvv.toString().length === 3) && libraryValidateCard.onlyNumbers(codeCvv) && numberCard.length === 16) {
         return true;  
+      } else if ((codeCvv.toString().length === 4) && libraryValidateCard.onlyNumbers(codeCvv) && numberCard.length === 15) {
+        return true;
       } else 
         return false;
     },
@@ -57,7 +56,7 @@ let libraryValidateCard = ((window, document) => {
     dateFormat: (date) => {
       let format = /^\d{1,2}\/\d{2,4}$/;
       if (!validformat.test(input.value)) {
-        alert('Invalid Date Format. Please correct and submit again.');
+        return false;
       } else {
         return true;
       }
@@ -75,20 +74,21 @@ let libraryValidateCard = ((window, document) => {
     expireDate: (date) => {
       if (libraryValidateCard.dateFormat(date)) {
         if (libraryValidateCard.existDate(date)) {
-          libraryValidateCard.activeButton();
+          return true;
         } else {
-          alert('La fecha introducida no existe.');
+          return false;
         }
       } else {
-        alert('El formato de la fecha es incorrecto.');
+        return false;
       }
     },
     getValue: (nCard, cvv, name) => {
       libraryValidateCard.isValidCreditCard(nCard);
       // libraryValidateCard.expireDate(date);
-      libraryValidateCard.validateCodeVerification(cvv);
+      libraryValidateCard.validateCodeVerification(cvv, nCard);
       libraryValidateCard.validateName(name);
-      alert('Su tarjeta es válida');
+      return true;
     }
   };
 })(window, document);
+

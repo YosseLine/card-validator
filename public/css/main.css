@@ -12,7 +12,7 @@
   margin-top: 0;
 }
 .text-black{
-  color: #000;
+  color: #fff;
 }
 .container-flex-column{
 height: 100%;
@@ -26,11 +26,11 @@ height: 90vh;
 }
 
 nav{
-  background: #FFF;
-  color: #000;
+  background: #4db6ac;
+  color: #fff;
 }
 nav .brand-logo{
-  color: #000;
+  color: #fff;
 }
 /*ESTILOS PARA EL FORM*/
 form.col.s12{
@@ -47,6 +47,18 @@ label{
 }
 input[type=number]:not(.browser-default), input[type=text]:not(.browser-default){
   border-bottom: 1px solid #000;
+}
+
+span.alert {
+  color: red;
+  font-size: 0.85em;
+}
+
+.box-data {
+  padding: 30px;
+  border: 2px solid #10aba7;
+  border-radius: 10px;
+  margin-top: 30px;
 }
 
 @media (min-width: 1200px) {

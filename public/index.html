@@ -68,9 +68,9 @@
 
         <div class="col s12 m6">
           <div class="icon-block">
-            <h4 class="center">Extensibilidad</h4>
+            <h4 class="center">¿Qué te permite ValidateJs?</h4>
 
-            <p class="light">ValidateJS es una herramienta completamente extensible y funciona bien con otras librerías. Continúa leyendo para saber cómo aplicar ValidateJS a tu proyecto.</p>
+            <p class="light">ValidateJS es una herramienta completamente extensible y funciona bien con otras librerías, podrás trabajar con Jquery por ejemplo. Validate Js te permitirá validar tarjetas VISA, MasterCard, AMEX y Discover. Continúa leyendo para saber cómo aplicar ValidateJS a tu proyecto.</p>
           </div>
         </div>
       </div>
@@ -90,20 +90,25 @@
         <div class="col s12 center">
           <p class="left-align light margin-btm-2"> 1- Como primer paso, deberás descargar el archivo index.js. </p>
           <div class="row center">
-            <a href="https://raw.github.com/YosseLine/card-validator/master/public/js/index.js" id="download-button" class="btn-large waves-effect waves-light teal lighten-1" download> Descargar index.js</a>
+            <a href="https://raw.github.com/YosseLine/card-validator/master/public/js/index.js" id="download-button" class="btn-large waves-effect waves-light teal lighten-1" download>Descargar<i class="material-icons">file_download</i></a>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="col s12 center">
-          <p class="left-align light margin-btm-2"> 2- Luego, tendrás que vincular la librería, mediante una etiqueta script, a tu archivo html. Ubicada antes de la finalización de la etiqueta body</p>
-          <img src="assets/images/form2.png" alt="Ejemplo" class="example">
+          <p class="left-align light margin-btm-2"> 2- Luego, tendrás que vincular la librería a tu archivo html, mediante una etiqueta script.</p>
+          <pre class="box-code">
+            <code>&lt;script src="js/index.js"&gt;&lt;/script&gt;</code>
+            <script type="text/javascript" src="js/index.js"></script>
+          </pre>
         </div>
-      </div>
-      <div class="row">
         <div class="col s12 center">
-          <p class="left-align light margin-btm-2">3- ¿Cómo usar la librería? ValidateJS cuenta con 4 formatos para ser llamado. Aquí te dejamos un ejemplo, junto con resultados que arrojará cada uno.</p>
-          <img src="assets/images/snippers.png" alt="Ejemplo" class="example">
+          <p class="left-align light margin-btm-2">3- ¿Cómo usar la librería? ValidateJS cuenta con 5 tipos de validación, como resultado retorna TRUE en caso de ser válido o viceversa, lo que permite a la librería ser adaptable.</p>
+          <pre class="box-code">
+            <code>libraryValidateCard.isValidCreditCard(numberCard);</code>
+            <code>libraryValidateCard.validateCodeVerification(cvc);</code>
+            <code>libraryValidateCard.validateName(name);</code>
+            <code>libraryValidateCar.expireDate(date);</code>
+            <code>libraryValidateCard.getValue(numberCard,cvc,name,date);</code>
+          </pre>
         </div>
       </div>
       <div class="row">
@@ -114,17 +119,6 @@
       </div>
     </div>
   </div>
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <p class="header col s12 text-white">Con pocos pasos, podrás validar una tarjeta.</p>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="https://coyunturaeconomica.com/files/coyuntura/tarjetas%20para%20inmigrantes.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -134,7 +128,6 @@
       </div>
     </div>
   </footer>
-
 
   <!-- Vínculo de archivos js-->
   <script type="text/javascript" src="vendors/jQuery/jquery-3.2.1.min.js"></script>

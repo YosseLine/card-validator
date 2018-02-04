@@ -3,7 +3,7 @@
 var libraryValidateCard = function (window, document) {
   return {
     lenghtCard: function lenghtCard(valInput) {
-      if (valInput.toString().length === 16) return true;else return false;
+      if (valInput.toString().length >= 15 && valInput.toString().length <= 16) return true;else return false;
     },
     onlyNumbers: function onlyNumbers(valInput) {
       var onlyNum = /^[0-9]+$/;
@@ -32,8 +32,10 @@ var libraryValidateCard = function (window, document) {
         //alert('Verifique el número de tarjeta ingresado');
       }
     },
-    validateCodeVerification: function validateCodeVerification(codeCvv) {
-      if (codeCvv.toString().length === 3 && libraryValidateCard.onlyNumbers(codeCvv)) {
+    validateCodeVerification: function validateCodeVerification(codeCvv, numberCard) {
+      if (codeCvv.toString().length === 3 && libraryValidateCard.onlyNumbers(codeCvv) && numberCard.length === 16) {
+        return true;
+      } else if (codeCvv.toString().length === 4 && libraryValidateCard.onlyNumbers(codeCvv) && numberCard.length === 15) {
         return true;
       } else return false;
     },
@@ -72,9 +74,9 @@ var libraryValidateCard = function (window, document) {
     getValue: function getValue(nCard, cvv, name) {
       libraryValidateCard.isValidCreditCard(nCard);
       // libraryValidateCard.expireDate(date);
-      libraryValidateCard.validateCodeVerification(cvv);
+      libraryValidateCard.validateCodeVerification(cvv, nCard);
       libraryValidateCard.validateName(name);
-      alert('Su tarjeta es válida');
+      return true;
     }
   };
 }(window, document);

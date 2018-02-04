@@ -23,7 +23,7 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo text-black">Validatejs</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="../../index.html" class="text-black">Inicio</a></li>
+        <li><a href="../index.html" class="text-black">Inicio</a></li>
         <li><a href="https://github.com/YosseLine/card-validator" class="text-black">GitHub</a></li>
       </ul>
 
@@ -34,21 +34,18 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons text-black">menu</i></a>
     </div>
   </nav>
-  <section class="container">
-    <div class="row">
-      <div class="col s12 m12 l12 xl10 offset-xl1">
-        <h3>Nombre: Selena Lopez Cespedes Rojas</h3>
-        <p>Número de tarjeta: <span>4716242339938263</span></p>
-        <p>Fecha de caducidad:<span>12/19</span></p>
-        <p>CVV:<span>555</span></p>
-      </div>
-    </div>
-
-  </section>
   <section class="container-flex-column vh90">
     <div class="container">
       <div class="row">
-        <form class="col s12 m12 l12 xl10 offset-xl1">
+        <div class="col s12 m6 l6 xl6">
+          <div class="box-data">
+            <p>Nombre: Selena Lopez Cespedes Rojas</p>
+            <p>Número de tarjeta: <span>4716242339938263</span></p>
+            <p>Fecha de caducidad:<span>12/19</span></p>
+            <p>CVV:<span>555</span></p>
+          </div>
+        </div>
+        <form class="col s12 m6 l6 xl6">
           <div class="row margin-btm-0">
             <div class="col s12">
               <label for="number-card">Ingrese número de tarjeta</label>
@@ -56,7 +53,8 @@
           </div>
           <div class="row">
             <div class="input-field col s12 margin-top-0">
-              <input id="cn" type="number" class="validate" name="cn">
+              <input id="cn" type="number" class="validate" name="cn" maxlength="16">
+              <span class="alert" style="display:none" id="alertcn">Inserte un numero de tarjeta valida</span>
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -77,6 +75,7 @@
           <div class="row">
             <div class="input-field col s12 margin-top-0">
               <input id="cv" type="number" class="validate" name="cv">
+              <span class="alert" style="display:none" id="alertcvc">Codigo CVC no valido</span>
             </div>
           </div>
           <div class="row margin-btm-0">
@@ -87,11 +86,12 @@
           <div class="row">
             <div class="input-field col s12 margin-top-0">
               <input id="name" type="text" class="validate" name="name">
+              <span class="alert" style="display:none" id="alertname">Verifique su nombre</span>
             </div>
           </div>
           <div class="row">
             <div class="col s6 offset-s3">
-              <a id="btn-validate" class="waves-effect waves-light btn-large col s12" disabled>Validar</a>
+              <a id="btn-validate" class="waves-effect waves-light btn-large col s12">Validar</a>
             </div>
           </div>
         </form>
