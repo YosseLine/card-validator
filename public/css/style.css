@@ -5,21 +5,27 @@
 }
 /*CLASES REUTILIZABLES*/
 .text-black{
-  color: #000;
+  color: #fff;
 }
 .text-white{
   color: #FFF;
 }
+.margin-btm-2{
+  margin-bottom: 2vh;
+}
 img.example{
   width: 100%;
 }
+body p{
+  font-size: 18px;
+}
 nav, footer.page-footer{
   color: #000;
-  background: #FFF;
+  background: #4db6ac;
 }
 nav ul a,
 nav .brand-logo {
-  color: #000;
+  color: #fff;
 }
 
 p {
@@ -36,10 +42,24 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
 
+.parallax-container .section {
+    width: 100%;
+}
+
+pre.box-code {
+  border: 2px solid #10aba7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+code {
+  display: block;
+  line-height: .5px;
+}
+i.material-icons{
+  margin-left: 2vw;
+}
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;

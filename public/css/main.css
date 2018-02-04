@@ -12,7 +12,13 @@
   margin-top: 0;
 }
 .text-black{
-  color: #000;
+  color: #fff;
+}
+.margin-btm-2{
+  margin-bottom: 2vh;
+}
+.margin-top-2{
+  margin-top: 2vh;
 }
 .container-flex-column{
 height: 100%;
@@ -21,32 +27,18 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-.vh90 {
-height: 90vh;
-}
-/*ESTILOS PARA BODY*/
-body{
-  background-image: url('https://img00.deviantart.net/a4b1/i/2008/211/8/f/sunset_twilight_clouds_sky_10_by_fantasystock.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
 nav{
-  background: #FFF;
-  color: #000;
+  background: #4db6ac;
+  color: #fff;
 }
 nav .brand-logo{
-  color: #000;
+  color: #fff;
+}
+hr.hr-color, hr.margin-top-2.margin-btm-2.hr-color{
+  background: #4db6ac;
 }
 /*ESTILOS PARA EL FORM*/
-form.col.s12{
-  background-color: rgba(255,255,255,0.3);
-  border: 3px solid #FFF;
-  border-radius: 50PX;
-  padding: 30px;
-}
-div.row{
+form div.row{
   margin-bottom: 0;
 }
 label{
@@ -54,6 +46,19 @@ label{
 }
 input[type=number]:not(.browser-default), input[type=text]:not(.browser-default){
   border-bottom: 1px solid #000;
+  margin-bottom: 0;
+}
+
+span.alert {
+  color: red;
+  font-size: 0.85em;
+}
+
+.box-data {
+  padding: 30px;
+  border: 2px solid #10aba7;
+  border-radius: 10px;
+  margin-top: 30px;
 }
 
 @media (min-width: 1200px) {
@@ -61,6 +66,6 @@ input[type=number]:not(.browser-default), input[type=text]:not(.browser-default)
     height: 100vh;
   }
   section div.container{
-    width: : 90% !important;
+    width: 90% !important;
   }
 }
