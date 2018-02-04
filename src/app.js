@@ -5,10 +5,12 @@ window.addEventListener('load', () =>{
   let cardNumberValue = document.getElementById('cn');
   let numberCvv = document.getElementById('cv');
   let dateValue = document.getElementById('exp');
-
+  
   cardNumberValue.addEventListener('keyup', () => {
+    // limitamos los input a 15 o 16 digitos
     if (cardNumberValue.value.toString().length >= 15 && cardNumberValue.value.toString().length <= 16) {
       if (!libraryValidateCard.isValidCreditCard(cardNumberValue.value))
+      // en caso de ser diferente muestra un span, solicitando sean datos correctos
         msgAlert(cardNumberValue, true);
       else
         msgAlert(cardNumberValue, false);
@@ -43,7 +45,6 @@ window.addEventListener('load', () =>{
     } 
   });
 
-
   btnValidate.addEventListener('click', () =>{
     let flag = false;
     if (libraryValidateCard.getValue(cardNumberValue.value, dateValue.value, numberCvv.value, nameValue.value)) {
@@ -66,7 +67,6 @@ window.addEventListener('load', () =>{
     }
   });
 });
-
 
 function msgAlert(target, option) {
   if (option)

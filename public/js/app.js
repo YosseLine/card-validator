@@ -9,8 +9,11 @@ window.addEventListener('load', function () {
   var dateValue = document.getElementById('exp');
 
   cardNumberValue.addEventListener('keyup', function () {
+    // limitamos los input a 15 o 16 digitos
     if (cardNumberValue.value.toString().length >= 15 && cardNumberValue.value.toString().length <= 16) {
-      if (!libraryValidateCard.isValidCreditCard(cardNumberValue.value)) msgAlert(cardNumberValue, true);else msgAlert(cardNumberValue, false);
+      if (!libraryValidateCard.isValidCreditCard(cardNumberValue.value))
+        // en caso de ser diferente muestra un span, solicitando sean datos correctos
+        msgAlert(cardNumberValue, true);else msgAlert(cardNumberValue, false);
     } else if (cardNumberValue.value.toString().length > 16) {
       cardNumberValue.value = cardNumberValue.value.substring(0, 16);
     }
