@@ -5,7 +5,7 @@
 }
 /*CLASES REUTILIZABLES*/
 .text-black{
-  color: #000;
+  color: #fff;
 }
 .text-white{
   color: #FFF;
@@ -21,11 +21,11 @@ body p{
 }
 nav, footer.page-footer{
   color: #000;
-  background: #FFF;
+  background: #4db6ac;
 }
 nav ul a,
 nav .brand-logo {
-  color: #000;
+  color: #fff;
 }
 
 p {
@@ -42,9 +42,21 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
+
+.parallax-container .section {
     width: 100%;
-  }
+}
+
+pre.box-code {
+  border: 2px solid #10aba7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+code {
+  display: block;
+  line-height: .5px;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
