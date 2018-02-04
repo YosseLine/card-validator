@@ -1,6 +1,6 @@
 'use strict';
 
-var libraryValidateCard = function (window, document) {
+var libraryValidateCard = function(window, document) {
   return {
     lenghtCard: function lenghtCard(valInput) {
       // valida la longitud de la tarjeta de credito que sea 15 o 16

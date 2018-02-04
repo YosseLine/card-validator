@@ -21,7 +21,19 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+/*
+Aqui habia conflicto y no sé si borrar, revisa y borras si no es util
+.vh90 {
+height: 90vh;
+}
 
+body{
+  background-image: url('https://d39l2hkdp2esp1.cloudfront.net/img/photo/121172/121172_00_2x.jpg?20170515031019');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
 nav{
   background: #4db6ac;
   color: #fff;
