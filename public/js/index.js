@@ -1,6 +1,6 @@
 'use strict';
 
-var libraryValidateCard = function (window, document) {
+var libraryValidateCard = function(window, document) {
   return {
     lenghtCard: function lenghtCard(valInput) {
       if (valInput.toString().length >= 15 && valInput.toString().length <= 16) return true;else return false;
