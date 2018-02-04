@@ -1,6 +1,7 @@
 let libraryValidateCard = ((window, document) => {
   return {
     lenghtCard: (valInput) => {
+      // valida la longitud de la tarjeta de credito que sea 15 o 16
       if (valInput.toString().length >= 15 && valInput.toString().length <= 16) 
         return true;
       else
@@ -8,7 +9,7 @@ let libraryValidateCard = ((window, document) => {
     },
     onlyNumbers: (valInput) => {
       let onlyNum = /^[0-9]+$/;
-      if ((onlyNum.test(valInput)))
+      if (onlyNum.test(valInput)) // todo los .test evalua expresiones regulares
         return true;
       else
         return false;
@@ -21,8 +22,8 @@ let libraryValidateCard = ((window, document) => {
         return false;
     },
     isValidCreditCard: (numberCard) => {
-      if (libraryValidateCard.lenghtCard(numberCard) && libraryValidateCard.onlyNumbers(numberCard)) {
-        let reverseNumberCard = numberCard.toString().split('');
+      if (libraryValidateCard.lenghtCard(numberCard) && libraryValidateCard.onlyNumbers(numberCard)) { // comprueba que solo sean numero y la longitud
+        let reverseNumberCard = numberCard.toString().split(''); 
         reverseNumberCard.reverse();
         let adder = 0; 
         for (var i = 0; i < parseInt(reverseNumberCard.length); i++) { 
@@ -40,6 +41,7 @@ let libraryValidateCard = ((window, document) => {
       }
     },
     validateCodeVerification: (codeCvv, numberCard) => {
+      // valida codigo cvc según la cantidad de digitos de la tarjeta, amex tiene 15 digitos y 4 de verificacion
       if ((codeCvv.toString().length === 3) && libraryValidateCard.onlyNumbers(codeCvv) && numberCard.length === 16) {
         return true;  
       } else if ((codeCvv.toString().length === 4) && libraryValidateCard.onlyNumbers(codeCvv) && numberCard.length === 15) {
